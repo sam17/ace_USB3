@@ -73,6 +73,7 @@ if(Ebus_HINTS AND EXISTS ${Ebus_HINTS})
     set(Ebus_LIBRARY_DIR_HINTS ${Ebus_HINTS}/lib)
 endif()
 
+add_definitions(-D_UNIX_ -D_LINUX_)
 # Search supplied hint directories first if supplied.
 # Find include directory for ebus
 find_path(Ebus_INCLUDE_DIR

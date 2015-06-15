@@ -13,7 +13,7 @@ PV_INIT_SIGNAL_HANDLER();
 
 AceUSB3::AceUSB3()
 {
-	//PV_INIT_SIGNAL_HANDLER();
+  //PV_INIT_SIGNAL_HANDLER();
 	lPvSystem = new PvSystem;
 	lDeviceInfo = SelectDevice( lPvSystem );
 }
@@ -136,7 +136,7 @@ void AceUSB3::AcquireImages( PvDevice *aDevice, PvStream *aStream, PvPipeline *a
 	PvFlushKb();
 	Mat image,rgb;
 	namedWindow("Window",WINDOW_NORMAL);
-    while ( !PvKbHit() )
+	while (!PvKbHit())
 	{
 		PvBuffer *lBuffer = NULL;
 		PvResult lOperationResult;
