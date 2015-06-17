@@ -4,7 +4,8 @@ A ROS Driver for Basler Ace USB 3.0 Camera using Pleora SDK
 ![image](http://s.baslerweb.com/fp-1424089632/media/assets/store/product/00/00/00/00/00/00/0f/1f/3ac7f0bfedfd6055dc05abdcd750a6b1.jpg)
 
 ## Supported hardware
-This driver should work at least with a Basler USB 3.0 Ace Area-scan camera ARM Version.
+This driver should work at least with a Basler USB 3.0 Ace Area-scan camera ARM Version. 
+It has been tested on Tegra TK1 and Odroid. 
 
 ## ROS API
 
