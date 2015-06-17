@@ -8,7 +8,7 @@ This driver should work at least with a Basler USB 3.0 Ace Area-scan camera ARM 
 
 ## ROS API
 
-### flir_gige_node
+### ros_pleora
 
 `ros_pleora` is a driver for a Basler Ace USB 3.0 camera.
 
@@ -18,15 +18,29 @@ This driver should work at least with a Basler USB 3.0 Ace Area-scan camera ARM 
     The unprocessed image data.
 
 ## Installing Pleora eBUS SDK
-You can find the latest version of Pleora eBus SDK from [here](http://www.pleora.com/support-center/documentation-downloads).  
+You can find the latest version of Pleora eBus SDK from [here](http://www.pleora.com/support-center/documentation-downloads). eBus SDK 4.0.7 is in teh install folder of this driver.  
 
 To install, run the following command:
 
 ```bash
 cd install
+sudo sh setup-usb.sh
 sudo ./eBUS_SDK_X.X.X.X_armhf-X.run
 # accept all default options
+sudo /opt/pleora/ebus_sdk/linux-gnueabihf-arm/bin/install_daemon.sh 
+source /opt/pleora/ebus_sdk/linux-gnueabihf-arm/bin/set_puregev_env
 ```
+If you are using ubuntu 14.04, you need to install `libudev-dev` and link it into `/usr/lib`, since eBUS SDK links to that version by default.
+
+```bash
+sudo apt-get install libudev-dev
+cd /usr/lib
+sudo ln -s arm-linux-gnueabihf/libudev.so libudev.so.1
+```
+
+Go to /opt/pleora/ebus_sdk/linux-gnueabihf-arm/share/samples and test using PvDeviceFinder. If it, works, The driver will work.
+
+Adding ```source /opt/pleora/ebus_sdk/linux-gnueabihf-arm/bin/set_puregev_env ``` to .bashrc is advised.
 
 This will install the eBUS SDK to `/opt/pleora`. 
 
