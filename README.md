@@ -18,7 +18,7 @@ This driver should work at least with a Basler USB 3.0 Ace Area-scan camera ARM 
     The unprocessed image data.
 
 ## Installing Pleora eBUS SDK
-You can find the latest version of Pleora eBus SDK from [here](http://www.pleora.com/support-center/documentation-downloads). eBus SDK 4.0.7 is in teh install folder of this driver.  
+You can find the latest version of Pleora eBus SDK from [here](http://www.pleora.com/support-center/documentation-downloads). eBus SDK 4.0.7 is in the install folder of this driver.  
 
 To install, run the following command:
 
