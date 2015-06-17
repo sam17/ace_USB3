@@ -8,7 +8,7 @@ This driver should work at least with a Basler USB 3.0 Ace Area-scan camera ARM 
 
 ## ROS API
 
-### flir_gige_node
+### ros_pleora
 
 `ros_pleora` is a driver for a Basler Ace USB 3.0 camera.
 
@@ -24,6 +24,7 @@ To install, run the following command:
 
 ```bash
 cd install
+sudo sh setup-usb.sh
 sudo ./eBUS_SDK_X.X.X.X_armhf-X.run
 # accept all default options
 sudo /opt/pleora/ebus_sdk/linux-gnueabihf-arm/bin/install_daemon.sh 
