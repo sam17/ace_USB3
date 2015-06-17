@@ -61,13 +61,6 @@ public:
 	void StartAcquisition();
 	void StopAcquisition();
 
-	//const PvDeviceInfo *SelectDevice( PvSystem *aPvSystem );
-	//PvDevice *ConnectToDevice( const PvDeviceInfo *aDeviceInfo );
-	//PvStream *OpenStream( const PvDeviceInfo *aDeviceInfo );
-	//void ConfigureStream( PvDevice *aDevice, PvStream *aStream );
-	//PvPipeline* CreatePipeline( PvDevice *aDevice, PvStream *aStream );
-	//sensor_msgs::ImagePtr AcquireImages( PvDevice *aDevice, PvStream *aStream, PvPipeline *aPipeline );
-	//void run(ros::NodeHandle);
 };
 
 #endif
