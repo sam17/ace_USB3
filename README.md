@@ -59,4 +59,4 @@ roslaunch ace_pleora_wrapper node.launch
 ```
 
 ##Additional Features
- A test code using only OpenCV to test camera grabbing and siplaying with OpenCV is added in the test folder.
+ A test code using only OpenCV to test camera grabbing and displaying with OpenCV is added in the test folder.
