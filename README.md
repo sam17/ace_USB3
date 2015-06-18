@@ -46,11 +46,15 @@ Adding ```source /opt/pleora/ebus_sdk/linux-gnueabihf-arm/bin/set_puregev_env ``
 This will install the eBUS SDK to `/opt/pleora`. 
 
 ## Running the node
-Running the node is easy. Just do
+Running the node is easy. Just do and select teh camera from the list
 
 ```
 roscore &
 rosrun ace_pleora_wrapper ros_pleora
 ```
+
+Launch file can also be used but add --screen flag to get camera select prints
+``` roslaunch ace_pleora_wrapper node.launch ```
+
 ##Additional Features
  A test code using only OpenCV to test camera grabbing and siplaying with OpenCV is added in the test folder.
