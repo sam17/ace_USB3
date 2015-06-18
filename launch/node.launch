@@ -1,0 +1,3 @@
+<launch>
+	<node name="ros_pleora" pkg="ace_pleora_wrapper" type="ros_pleora" />
+</launch>
