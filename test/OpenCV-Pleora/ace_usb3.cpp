@@ -134,9 +134,10 @@ void AceUSB3::AcquireImages( PvDevice *aDevice, PvStream *aStream, PvPipeline *a
 	// Acquire images until the user instructs us to stop.
 	cout << endl << "<press a key to stop streaming>" << endl;
 	PvFlushKb();
-	Mat image,rgb;
+	Mat image;
+	gpu::GpuMat rgb;
 	namedWindow("Window",WINDOW_NORMAL);
-    while ( !PvKbHit() )
+	while ( !PvKbHit() )
 	{
 		PvBuffer *lBuffer = NULL;
 		PvResult lOperationResult;
@@ -199,11 +200,14 @@ void AceUSB3::AcquireImages( PvDevice *aDevice, PvStream *aStream, PvPipeline *a
 				  
 				  //image = Mat(Size(width, height),CV_8SC1,dataBuffer,lImage->GetBitsPerPixel()/8*width + lImage->GetPaddingX());
 				  //imshow("Hey",image);
-				  Mat img = image.clone();
+				  gpu::GpuMat img;
+				  img.upload(image);
 				  //img.convertTo(img,CV_8UC1,0.0625);
-				  rgb = Mat(height,width,CV_8UC3);
-				  cvtColor(img, rgb, CV_BayerBG2RGB, 0);
-				  imshow("Window",rgb);
+				  //rgb = Mat(height,width,CV_8UC3);
+				  //gpu::cvtColor(img, rgb, COLOR_BayerBG2RGB,0);
+				  gpu::demosaicing(img,rgb,COLOR_BayerBG2RGB);
+				  cv::Mat result (rgb);
+				  imshow("Window",result);
 				  
 				  // Read width, height.
 				  waitKey(1);

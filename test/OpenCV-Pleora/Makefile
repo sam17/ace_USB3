@@ -50,7 +50,7 @@ LDFLAGS      += -L$(GEN_LIB_PATH)
 LDFLAGS      += -Wl,-rpath=$(GEN_LIB_PATH)
 
 #Configure OpenCV
-LIBS			:= -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect
+LIBS			:= -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect -lopencv_gpu -lcuda
 
 
 LD_LIBRARY_PATH       = $(PV_LIBRARY_PATH):$(QT_LIBRARY_PATH):$(GEN_LIB_PATH)

@@ -17,6 +17,8 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/core/core.hpp"
+#include "opencv2/gpu/gpu.hpp"
+#include "opencv2/opencv.hpp"
 
 #define BUFFER_COUNT ( 16 )
 
